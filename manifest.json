@@ -1,0 +1,20 @@
+{
+  "name": "Chord Finder AI",
+  "short_name": "ChordFinder",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1022",
+  "theme_color": "#0b1022",
+  "description": "ניתוח אקורדים בזמן אמת, תמלול חי, וזיהוי הרמוניה חכמה.",
+  "icons": [
+    {
+      "src": "icon512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

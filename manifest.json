@@ -4,7 +4,7 @@
   "lang": "he",
   "dir": "rtl",
   "start_url": "./index.html",
-  "display": "standalone",
+  "display": "fullscreen",
   "orientation": "portrait",
   "background_color": "#0b1022",
   "theme_color": "#0b1022",

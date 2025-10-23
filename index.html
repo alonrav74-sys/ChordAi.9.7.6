@@ -3,20 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chord Finder Pro ⭐ v10.0 EXCELLENT</title>
-  <meta name="description" content="ניתוח אקורדים מקצועי עם AI - זיהוי הרמוניות מורכבות, היפוכים חכמים וקישוטים">
+  <title>Chord Finder Pro — v10.0.0 (Professional Edition)</title>
   <meta name="theme-color" content="#0b1022" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Chord Finder Pro">
-  <meta name="mobile-web-app-capable" content="yes">
   <link rel="manifest" href="manifest.json">
-  <link rel="icon" type="image/png" href="icons/icon-192.png">
-  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Chord Finder Pro — v10.0.0</h1>
+  <p><!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chord Finder Pro — v10.0.0 (Professional Edition)</title>
+  <meta name="theme-color" content="#0b1022" />
   <style>
     :root{--bg:#0b1022;--panel:#0f172a;--muted:#94a3b8;--text:#e5e7eb;--card:#0a1324;--border:#1b2333;--brand:#22c55e;--accent:#38bdf8;--alert:#f59e0b}
     *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(160deg,var(--bg),#0a0f1c);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);direction:rtl;min-height:100vh}
+    body{margin:0;background:linear-gradient(160deg,var(--bg),#0a0f1c);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);direction:rtl}
     .wrap{max-width:1200px;margin:auto;padding:18px}
     h1{margin:6px 0 10px;font-size:24px}
     .muted{color:var(--muted);font-size:14px}
@@ -56,8 +66,8 @@
 </head>
 <body>
   <div class="wrap">
-    <h1>🎵 Chord Finder Pro v10.0 ⭐ <span class="badge pro">EXCELLENT</span></h1>
-    <div class="muted">מהדורה מקצועית: הרמוניות מורכבות • היפוכים חכמים • ולידציה קונטקסטואלית • זיהוי קישוטים • ניתוח מודאלי</div>
+    <h1>🎵 Chord Finder Pro — v10.0.0 <span class="badge pro">Professional Edition</span></h1>
+    <div class="muted">מהדורה מקצועית: הרמוניות מורכבות • היפוכים חכמים • ולידציה קונטקסטואלית • זיהוי קישוטים • יישור קצבי • ניתוח מודאלי</div>
 
     <section class="panel">
       <div class="row">
@@ -65,11 +75,11 @@
         <label>מצב זיהוי:
           <select id="extMode">
             <option value="basic">בסיסי (טריאדות)</option>
-            <option value="jazz" selected>חכם (7th, sus, dim)</option>
-            <option value="pro">מקצועי (9/11/13/alt)</option>
+            <option value="jazz" selected>ג'אז (7/9/11/13)</option>
+            <option value="pro">מקצועי (כל ההרחבות)</option>
           </select>
         </label>
-        <label>קוונטה:
+        <label>קוואנטה:
           <select id="quant">
             <option value="2">1/2</option>
             <option value="4" selected>1/4</option>
@@ -82,7 +92,7 @@
         </label>
         <label>מקצב:
           <select id="timeSig">
-            <option value="4" selected>4/4</option>
+            <option value="4">4/4</option>
             <option value="3">3/4</option>
             <option value="6">6/8</option>
           </select>
@@ -126,7 +136,7 @@
     </section>
 
     <section class="panel">
-      <h2>📊 ניתוח הרמוני מתקדם</h2>
+      <h2>ניתוח הרמוני מתקדם</h2>
       <div class="analysis-grid">
         <div class="analysis-card">
           <h3>אקורדים מבניים</h3>
@@ -137,7 +147,7 @@
           <div class="value" id="ornamentCount">—</div>
         </div>
         <div class="analysis-card">
-          <h3>דומיננט משני</h3>
+          <h3>אקורדי דומיננט משני</h3>
           <div class="value" id="secDomCount">—</div>
         </div>
         <div class="analysis-card">
@@ -148,7 +158,7 @@
     </section>
 
     <section class="panel">
-      <h2>🎹 תצוגה חיה</h2>
+      <h2>תצוגה חיה</h2>
       <audio id="player" controls preload="auto" crossorigin="anonymous" style="width:100%"></audio>
       <div class="live">
         <div>
@@ -165,7 +175,7 @@
 
     <section class="panel">
       <h2>📝 דף נגינה — זמן אמת</h2>
-      <div id="liveSheet" class="mono">יוצג לאחר ניתוח...</div>
+      <div id="liveSheet" class="mono">—</div>
       <div class="row" style="margin-top:8px">
         <button id="resetSheet">אפס דף</button>
         <button id="exportBtn">ייצא ל-ChordPro</button>
@@ -173,6 +183,1383 @@
     </section>
   </div>
 
-<script src="app.js"></script>
+<script type="module">
+// ===== UI REFS =====
+const fileEl=document.getElementById('file');
+const analyzeBtn=document.getElementById('analyzeBtn');
+const playBtn=document.getElementById('playBtn');
+const statusEl=document.getElementById('status');
+const errorEl=document.getElementById('error');
+const prog=document.getElementById('prog');
+const progTxt=document.getElementById('progTxt');
+const gateChip=document.getElementById('gateChip');
+const player=document.getElementById('player');
+const bpmEl=document.getElementById('bpm');
+const durEl=document.getElementById('dur');
+const quantEl=document.getElementById('quant');
+const capoEl=document.getElementById('capo');
+const keyBadge=document.getElementById('keyBadge');
+const modeBadge=document.getElementById('modeBadge');
+const liveChordEl=document.getElementById('liveChord');
+const liveFunctionEl=document.getElementById('liveFunction');
+const liveSheetEl=document.getElementById('liveSheet');
+const resetSheetBtn=document.getElementById('resetSheet');
+const exportBtn=document.getElementById('exportBtn');
+const aiBadge=document.getElementById('aiBadge');
+const bassSensEl=document.getElementById('bassSens');
+const decSensEl=document.getElementById('decSens');
+const valSensEl=document.getElementById('valSens');
+const bassMulTxt=document.getElementById('bassMulTxt');
+const decMulTxt=document.getElementById('decMulTxt');
+const valMulTxt=document.getElementById('valMulTxt');
+const timeSigEl=document.getElementById('timeSig');
+
+const structuralCountEl=document.getElementById('structuralCount');
+const ornamentCountEl=document.getElementById('ornamentCount');
+const secDomCountEl=document.getElementById('secDomCount');
+const modalBorrowCountEl=document.getElementById('modalBorrowCount');
+const ornamentChip=document.getElementById('ornamentChip');
+const structuralChip=document.getElementById('structuralChip');
+
+bassSensEl.oninput=()=>{ bassMulTxt.textContent=Number(bassSensEl.value).toFixed(2); };
+decSensEl.oninput=()=>{ decMulTxt.textContent=Number(decSensEl.value).toFixed(2); };
+valSensEl.oninput=()=>{ valMulTxt.textContent=Number(valSensEl.value).toFixed(2); };
+
+function showAnalyzing(stepText){ 
+  statusEl.innerHTML='<span class="spin"></span> '+stepText; 
+  statusEl.className='pill warn'; 
+  statusEl.style.display='inline-flex'; 
+}
+function ok(msg){ 
+  statusEl.textContent=msg; 
+  statusEl.className='pill ok'; 
+  statusEl.style.display='inline-flex'; 
+}
+function err(msg){ 
+  errorEl.textContent=msg; 
+  errorEl.style.display='inline-flex'; 
+}
+function hideAlerts(){ 
+  statusEl.style.display='none'; 
+  errorEl.style.display='none'; 
+  prog.style.display='none'; 
+  progTxt.textContent=''; 
+  gateChip.style.display='none'; 
+}
+
+// ===== MUSICAL CONSTANTS =====
+const NOTES_SHARP=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+const NOTES_FLAT=['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B'];
+const MAJOR_SCALE=[0,2,4,5,7,9,11];
+const MINOR_SCALE=[0,2,3,5,7,8,10];
+const DORIAN_SCALE=[0,2,3,5,7,9,10];
+const MIXOLYDIAN_SCALE=[0,2,4,5,7,9,10];
+const LYDIAN_SCALE=[0,2,4,6,7,9,11];
+
+const toPc=n=>((n%12)+12)%12;
+const nameSharp=i=>NOTES_SHARP[toPc(i)];
+const nameFlat=i=>NOTES_FLAT[toPc(i)];
+const dot=(a,b)=>a.reduce((s,x,i)=>s+x*b[i],0);
+const norm=a=>Math.sqrt(a.reduce((s,x)=>s+x*x,0))||1;
+const cos=(a,b)=>dot(a,b)/(norm(a)*norm(b));
+
+function maskVec(root, pcs){ 
+  const v=new Array(12).fill(0); 
+  pcs.forEach(iv=>v[(root+iv)%12]=1); 
+  return v; 
+}
+
+function parseRoot(label){ 
+  const m=label?.match?.(/^([A-G](?:#|b)?)/); 
+  if(!m) return -1; 
+  const nm=m[1].replace('b','#'); 
+  const i=NOTES_SHARP.indexOf(nm); 
+  return i<0?-1:i; 
+}
+
+function applyCapoToLabel(label, capo){
+  if(!capo || capo===0) return label;
+  const m=label.match(/^([A-G](?:#|b)?)(.*)$/); 
+  if(!m) return label;
+  const idx=NOTES_SHARP.indexOf(m[1].replace('b','#')); 
+  if(idx<0) return label;
+  const newPc = toPc(idx - capo);
+  return nameFlat(newPc)+(m[2]||'');
+}
+
+function sanitizeLabel(lbl){
+  if(!lbl) return lbl;
+  return lbl
+    .replace(/\\n/g,'')
+    .replace(/[\\n\\r\\t]/g,'')
+    .replace(/\\s{2,}/g,' ')
+    .replace(/[^A-Ga-g#bm79sus246()\\/\\s+altdim]/g,'')
+    .trim();
+}
+
+// ===== KRUMHANSL KEY DETECTION =====
+const KS_MAJOR=[6.35,2.23,3.48,2.33,4.38,4.09,2.52,5.19,2.39,3.66,2.29,2.88];
+const KS_MINOR=[6.33,2.68,3.52,5.38,2.60,3.53,2.54,4.75,3.98,2.69,3.34,3.17];
+
+function ksScore(chromaAgg, root, isMinor){
+  const prof=(isMinor? KS_MINOR: KS_MAJOR);
+  let s=0; 
+  for(let i=0;i<12;i++){ 
+    s += chromaAgg[toPc(i+root)] * prof[i]; 
+  } 
+  return s;
+}
+
+function inKey(pc, keyRoot, minor){ 
+  const sc = minor? MINOR_SCALE: MAJOR_SCALE; 
+  return sc.includes(toPc(pc-keyRoot)); 
+}
+
+// ===== STAGE 1: DECODE AUDIO =====
+analyzeBtn.onclick=async()=>{
+  hideAlerts(); 
+  aiBadge.style.display='none';
+  liveChordEl.textContent='—'; 
+  liveFunctionEl.textContent='—';
+  liveSheetEl.textContent='—'; 
+  playBtn.disabled=true; 
+  keyBadge.textContent='—'; 
+  modeBadge.textContent='—';
+  structuralCountEl.textContent='—';
+  ornamentCountEl.textContent='—';
+  secDomCountEl.textContent='—';
+  modalBorrowCountEl.textContent='—';
+
+  const f=fileEl.files?.[0]; 
+  if(!f){ 
+    err('בחר קובץ אודיו/וידאו'); 
+    return; 
+  }
+
+  try{
+    showAnalyzing('שלב 1/6: טעינת אודיו');
+    const st1 = await decodeAudio(f);
+    bpmEl.textContent = st1.bpm; 
+    durEl.textContent = st1.duration.toFixed(1)+'s';
+    const url = URL.createObjectURL(f); 
+    player.src=url;
+
+    showAnalyzing('שלב 2/6: מיצוי תכונות (כרומה + בס F0)');
+    const feats = extractFeatures(st1);
+
+    showAnalyzing('שלב 3/6: זיהוי סולם + מצב (Krumhansl)');
+    const key = estimateKeyKrumhansl(feats, false, st1.duration);
+    const mode = detectMode(feats, key);
+
+    showAnalyzing('שלב 4/6: מעקב אקורדים (HMM)');
+    let timeline = chordTrackingWithHMM(feats, key);
+
+    showAnalyzing('שלב 5/6: הרחבות מקצועיות + היפוכים');
+    timeline = finalizeTimeline(timeline, key, st1.bpm, feats);
+    timeline = enforceEarlyDiatonicOpening(timeline, key, feats, st1.bpm)
+               .map(ev=>({...ev, label:sanitizeLabel(ev.label)}));
+
+    const extMode = document.getElementById('extMode').value;
+    let decoratedTL = decorateQualitiesPro(timeline, feats, key, extMode);
+    decoratedTL = adjustMinorMajors(decoratedTL, feats, key);
+    decoratedTL = addInversionsPro(decoratedTL, feats, Number(bassSensEl.value)||1.0);
+
+    showAnalyzing('שלב 6/6: ולידציה + קישוטים + מודאלי');
+    decoratedTL = validateAndRefine(decoratedTL, key, feats);
+    decoratedTL = classifyOrnaments(decoratedTL, st1.bpm, feats);
+    decoratedTL = analyzeModalContext(decoratedTL, key, feats);
+    decoratedTL = quantizeToGrid(decoratedTL, st1.bpm, parseInt(timeSigEl.value));
+
+    const capo=parseInt(capoEl.value||'0',10);
+    keyBadge.textContent = applyCapoToLabel(nameSharp(key.root)+(key.minor?'m':''), capo);
+    modeBadge.textContent = mode;
+
+    // סטטיסטיקה
+    const structural = decoratedTL.filter(e=>e.ornamentType==='structural').length;
+    const ornaments = decoratedTL.filter(e=>e.ornamentType!=='structural').length;
+    const secDom = decoratedTL.filter(e=>e.function==='secondary_dominant').length;
+    const modalBorrow = decoratedTL.filter(e=>e.modalContext).length;
+    
+    structuralCountEl.textContent = structural;
+    ornamentCountEl.textContent = ornaments;
+    secDomCountEl.textContent = secDom;
+    modalBorrowCountEl.textContent = modalBorrow;
+
+    window.__STATE = { 
+      bpm: st1.bpm, 
+      duration: st1.duration, 
+      timeline: decoratedTL, 
+      key, 
+      mode,
+      gateTime:detectStartGate(feats)*(feats.hop/feats.sr), 
+      energy:{
+        t:feats.frameE.map((_,i)=> i*(feats.hop/feats.sr)), 
+        v:normalize01(feats.frameE)
+      }, 
+      feats:{hop:feats.hop,sr:feats.sr} 
+    };
+
+    ok('✓ ניתוח הושלם בהצלחה');
+    progTxt.textContent='';
+    hookPlaybackLive(); 
+    playBtn.disabled=false; 
+    aiBadge.style.display='inline-flex';
+  }catch(e){ 
+    console.error(e); 
+    err('שגיאה בניתוח: '+e.message); 
+  }
+};
+
+playBtn.onclick=async()=>{ 
+  try{ 
+    await player.play(); 
+  }catch(e){ 
+    alert('לחץ ▶️ על הנגן כדי לאשר ניגון'); 
+  } 
+};
+
+// ===== DECODE AUDIO =====
+async function decodeAudio(file){
+  const AC = window.AudioContext || window.webkitAudioContext;
+  const ctx = new AC();
+  try{ await ctx.resume(); }catch{}
+  const arr = await file.arrayBuffer();
+
+  try{
+    const buf = await ctx.decodeAudioData(arr.slice(0));
+    return postDecode(buf);
+  }catch(e1){
+    try{
+      const buf = await new Promise((resolve,reject)=>{
+        ctx.decodeAudioData(arr.slice(0), b=>resolve(b), err=>reject(err));
+      });
+      return postDecode(buf);
+    }catch(e2){
+      console.warn('decodeAudioData failed', e1, e2);
+      throw e2||e1;
+    }
+  }
+
+  function postDecode(buf){
+    const mono = (buf.numberOfChannels===1)? buf.getChannelData(0) : mixStereo(buf);
+    const sr0=buf.sampleRate, sr=22050;
+    const x = resampleLinear(mono, sr0, sr);
+    const bpm = estimateTempo(x, sr);
+    return { x, sr, bpm, duration: x.length/sr };
+  }
+}
+
+// ===== TEMPO ESTIMATION (simple autocorrelation) =====
+function estimateTempo(x, sr){
+  const hop=Math.floor(0.1*sr);
+  const frames=[];
+  for(let s=0; s+4096<=x.length; s+=hop){
+    let e=0;
+    for(let i=0;i<4096;i++) e+=x[s+i]*x[s+i];
+    frames.push(e);
+  }
+  const env = frames;
+  const minLag=Math.floor(0.3/(hop/sr));
+  const maxLag=Math.floor(2.0/(hop/sr));
+  let bestLag=minLag, bestR=-Infinity;
+  for(let lag=minLag; lag<=maxLag; lag++){
+    let r=0;
+    for(let i=0;i<env.length-lag;i++){
+      r += env[i]*env[i+lag];
+    }
+    if(r>bestR){ bestR=r; bestLag=lag; }
+  }
+  const periodSec = bestLag*(hop/sr);
+  const bpm = 60/periodSec;
+  return Math.max(60, Math.min(200, Math.round(bpm)));
+}
+
+// ===== FEATURE EXTRACTION =====
+function extractFeatures(st1){
+  const {x,sr} = st1;
+  const hop=Math.floor(0.10*sr), win=4096;
+  const hann=new Float32Array(win); 
+  for(let i=0;i<win;i++) hann[i]=0.5*(1-Math.cos(2*Math.PI*i/(win-1)));
+  
+  const frames=[]; 
+  for(let s=0; s+win<=x.length; s+=hop) frames.push(x.subarray(s,s+win));
+
+  function fft(input){ 
+    let n=input.length,N=1; 
+    while(N<n)N<<=1; 
+    const re=new Float32Array(N),im=new Float32Array(N); 
+    re.set(input);
+    let j=0; 
+    for(let i=0;i<N;i++){ 
+      if(i<j){ 
+        [re[i],re[j]]=[re[j],re[i]]; 
+        [im[i],im[j]]=[im[j],im[i]]; 
+      } 
+      let m=N>>1; 
+      while(m>=1&&j>=m){ j-=m; m>>=1; } 
+      j+=m; 
+    }
+    for(let len=2; len<=N; len<<=1){ 
+      const ang=-2*Math.PI/len, wlr=Math.cos(ang), wli=Math.sin(ang);
+      for(let i=0;i<N;i+=len){ 
+        let wr=1, wi=0;
+        for(let k=0;k<(len>>1);k++){
+          const ur=re[i+k], ui=im[i+k];
+          const vr=re[i+k+(len>>1)]*wr - im[i+k+(len>>1)]*wi;
+          const vi=re[i+k+(len>>1)]*wi + im[i+k+(len>>1)]*wr;
+          re[i+k]=ur+vr; im[i+k]=ui+vi;
+          re[i+k+(len>>1)]=ur-vr; im[i+k+(len>>1)]=ui-vi;
+          const nwr=wr*wlr - wi*wli; wi=wr*wli + wi*wlr; wr=nwr;
+        }
+      }
+    }
+    const mags=new Float32Array(N>>1); 
+    for(let k=0;k<mags.length;k++) mags[k]=Math.hypot(re[k],im[k]);
+    return {mags,N};
+  }
+
+  const hz=(b,N)=>b*sr/N;
+  const chroma=[], bassCand=[], frameE=[], spectralCentroid=[];
+  
+  for(let i=0;i<frames.length;i++){
+    const y=new Float32Array(win); 
+    for(let k=0;k<win;k++) y[k]=frames[i][k]*hann[k];
+
+    let en=0; 
+    for(let k=0;k<win;k++){ en += y[k]*y[k]; } 
+    frameE.push(en);
+
+    const {mags,N}=fft(y);
+    const c=new Float32Array(12); 
+    let eSpec=0, centroidNum=0, centroidDen=0;
+    
+    for(let b=1;b<mags.length;b++){
+      const f=hz(b,N); 
+      if(f<80||f>5000) continue;
+      const midi=69+12*Math.log2(f/440); 
+      const pc=toPc(Math.round(midi));
+      c[pc]+=mags[b]; 
+      eSpec+=mags[b];
+      centroidNum += f*mags[b];
+      centroidDen += mags[b];
+    }
+    
+    if(eSpec>0){ 
+      let s=0; 
+      for(let k=0;k<12;k++) s+=c[k]; 
+      for(let k=0;k<12;k++) c[k]/=s; 
+    }
+    chroma.push(c);
+    spectralCentroid.push(centroidDen>0 ? centroidNum/centroidDen : 0);
+
+    // Bass F0 (ACF on LPF signal)
+    const magsLP=new Float32Array(mags.length);
+    const fmax=250;
+    for(let b=1;b<mags.length;b++){ 
+      const f=hz(b,N); 
+      if(f<=fmax) magsLP[b]=mags[b]; 
+    }
+    
+    const yLP=new Float32Array(win);
+    for(let b=1;b<magsLP.length;b++){
+      const f=hz(b,N); 
+      if(f<=fmax){
+        const omega=2*Math.PI*f/sr;
+        for(let n=0;n<win;n++){ yLP[n]+=magsLP[b]*Math.cos(omega*n); }
+      }
+    }
+    
+    const fmin=40, f0minLag=Math.floor(sr/fmax), f0maxLag=Math.floor(sr/Math.max(1,fmin));
+    let bestLag=-1, bestR=-1;
+    const mean = yLP.reduce((s,v)=>s+v,0)/win;
+    let denom=0; 
+    for(let n=0;n<win;n++){ 
+      const d=yLP[n]-mean; 
+      denom+=d*d; 
+    }
+    denom = Math.max(denom, 1e-9);
+    
+    for(let lag=f0minLag; lag<=f0maxLag; lag++){
+      let r=0;
+      for(let n=0;n<win-lag;n++){
+        const a=yLP[n]-mean, b=yLP[n+lag]-mean; 
+        r += a*b;
+      }
+      r/=denom;
+      if(r>bestR){ bestR=r; bestLag=lag; }
+    }
+    
+    let pcBass=-1;
+    if(bestLag>0){
+      const f0 = sr / bestLag;
+      if(f0>=fmin && f0<=fmax){
+        const midiF0 = 69 + 12*Math.log2(f0/440);
+        pcBass = toPc(Math.round(midiF0));
+      }
+    }
+    bassCand.push(pcBass);
+  }
+
+  // Temporal stability for bass
+  const thrE = percentileLocal(frameE, 40);
+  const bassPc=new Array(bassCand.length).fill(-1);
+  
+  for(let i=1;i<bassCand.length-1;i++){
+    const v=bassCand[i];
+    if(v<0) continue;
+    if(frameE[i] < thrE) continue;
+    if((bassCand[i-1]===v) || (bassCand[i+1]===v)){
+      bassPc[i]=v;
+    }
+  }
+
+  // Close short runs
+  let runStart=-1, runVal=-2;
+  for(let i=0;i<bassPc.length;i++){
+    const v=bassPc[i];
+    if(v>=0 && runStart<0){ runStart=i; runVal=v; }
+    const end = (i===bassPc.length-1) || (bassPc[i+1]!==v);
+    if(runStart>=0 && end){
+      if(i-runStart+1>=2){ 
+        for(let k=runStart;k<=i;k++) bassPc[k]=runVal; 
+      }
+      else{ 
+        for(let k=runStart;k<=i;k++) bassPc[k]=-1; 
+      }
+      runStart=-1; runVal=-2;
+    }
+  }
+
+  return { 
+    chroma, 
+    bassPc, 
+    frameE, 
+    spectralCentroid,
+    hop:Math.floor(0.10*sr), 
+    sr 
+  };
+}
+
+// ===== KEY DETECTION =====
+function estimateKeyKrumhansl(feats){
+  const {chroma}=feats;
+  const L = chroma.length;
+  const agg=new Array(12).fill(0);
+  for(let i=0;i<L;i++){ 
+    for(let p=0;p<12;p++) agg[p]+=chroma[i][p]; 
+  }
+  const s=agg.reduce((a,b)=>a+b,0)||1; 
+  for(let p=0;p<12;p++) agg[p]/=s;
+  
+  let best={score:-1, root:0, minor:false};
+  for(let r=0;r<12;r++){
+    const sMaj=ksScore(agg,r,false), sMin=ksScore(agg,r,true);
+    if(sMaj>best.score){ best={score:sMaj, root:r, minor:false}; }
+    if(sMin>best.score){ best={score:sMin, root:r, minor:true}; }
+  }
+  return {root:best.root, minor:best.minor};
+}
+
+// ===== MODE DETECTION =====
+function detectMode(feats, key){
+  const {chroma} = feats;
+  const agg = new Array(12).fill(0);
+  for(const c of chroma){
+    for(let p=0;p<12;p++) agg[p]+=c[p];
+  }
+  const s = agg.reduce((a,b)=>a+b,0)||1;
+  for(let p=0;p<12;p++) agg[p]/=s;
+
+  // Check for modal characteristics
+  if(!key.minor){
+    const b7 = agg[toPc(key.root+10)];
+    if(b7 > 0.15) return 'Mixolydian';
+    const sharp4 = agg[toPc(key.root+6)];
+    if(sharp4 > 0.12) return 'Lydian';
+    return 'Major (Ionian)';
+  }else{
+    const nat6 = agg[toPc(key.root+9)];
+    const nat7 = agg[toPc(key.root+11)];
+    if(nat6 > 0.15 && nat7 < 0.08) return 'Dorian';
+    if(nat7 > 0.15) return 'Harmonic Minor';
+    return 'Natural Minor (Aeolian)';
+  }
+}
+
+// ===== HMM CHORD TRACKING =====
+function chordTrackingWithHMM(feats, key){
+  const {chroma,bassPc,hop,sr,frameE}=feats;
+  const diatonic = (key.minor? MINOR_SCALE: MAJOR_SCALE).map(s=>toPc(key.root+s));
+  const candidates=[];
+  
+  for(const r of diatonic){ 
+    candidates.push({root:r,label:nameSharp(r)}); 
+    candidates.push({root:r,label:nameSharp(r)+'m'}); 
+  }
+
+  function emitScore(i,cand){
+    const c=chroma[i]; 
+    if(!c) return -Infinity;
+    const isMinor = /m$/.test(cand.label);
+    const mask = isMinor? maskVec(cand.root,[0,3,7]) : maskVec(cand.root,[0,4,7]);
+    let s = cos([...c],mask);
+    const bassMul = Number(bassSensEl.value)||1.0;
+    if(bassPc[i]>=0 && cand.root===bassPc[i]) s+=0.15*bassMul;
+    if(frameE[i] < percentileLocal(frameE,30)) s -= 0.10;
+    return s;
+  }
+
+  const T=(a,b)=>{
+    if(a.label===b.label) return 0.0;
+    const dist = Math.min((b.root-a.root+12)%12,(a.root-b.root+12)%12);
+    const sameQual = /m$/.test(a.label)===/m$/.test(b.label);
+    let penalty = 0.6 + 0.1*dist + (sameQual?0.0:0.05);
+    return penalty;
+  };
+
+  const N=candidates.length, M=chroma.length;
+  const dp=new Array(N).fill(0);
+  const backptr=Array.from({length:M},()=>new Array(N).fill(-1));
+  
+  for(let s=0;s<N;s++) dp[s]=emitScore(0,candidates[s]);
+  
+  for(let i=1;i<M;i++){
+    const newdp=new Array(N).fill(-Infinity);
+    for(let s=0;s<N;s++){
+      let bestVal=-Infinity, bestJ=-1;
+      for(let j=0;j<N;j++){
+        const val = dp[j] - T(candidates[j], candidates[s]);
+        if(val>bestVal){ bestVal=val; bestJ=j; }
+      }
+      newdp[s]=bestVal + emitScore(i,candidates[s]);
+      backptr[i][s]=bestJ;
+    }
+    for(let s=0;s<N;s++) dp[s]=newdp[s];
+  }
+  
+  let bestS=0, bestVal=-Infinity;
+  for(let s=0;s<N;s++){ 
+    if(dp[s]>bestVal){ bestVal=dp[s]; bestS=s; } 
+  }
+  
+  const states=new Array(M); 
+  states[M-1]=bestS;
+  for(let i=M-1;i>0;i--) states[i-1]=backptr[i][states[i]];
+  
+  const tl=[]; 
+  const secPerHop = hop/sr;
+  let cur=states[0], start=0;
+  
+  for(let i=1;i<M;i++){
+    if(states[i]!==cur){
+      tl.push({t:start*secPerHop, label:candidates[cur].label, fi:start});
+      cur=states[i]; start=i;
+    }
+  }
+  tl.push({t:start*secPerHop, label:candidates[cur].label, fi:start});
+  
+  return tl;
+}
+
+// ===== FINALIZE TIMELINE =====
+function finalizeTimeline(tl, key, bpm, feats){
+  const spb=60/Math.max(60,Math.min(200,bpm||120));
+  const minDur=Math.max(0.5, 0.45*spb);
+  const out=[];
+  
+  for(let i=0;i<tl.length;i++){
+    const a=tl[i]; 
+    const b=tl[i+1]; 
+    const dur=(b?b.t: a.t+4*spb) - a.t;
+    
+    if(dur<minDur && out.length){
+      const fiA=a.fi, fiB=(b?b.fi:fiA+1);
+      const bpA = feats.bassPc[fiA] ?? -1;
+      const bpB = feats.bassPc[Math.min(feats.bassPc.length-1, fiB)] ?? -1;
+      const bassChanged = (bpA>=0 && bpB>=0 && bpA!==bpB);
+      
+      if(!bassChanged){
+        const prev=out[out.length-1];
+        const r=parseRoot(a.label), pr=parseRoot(prev.label);
+        const inA=inKey(r, key.root, key.minor), inP=inKey(pr, key.root, key.minor);
+        if(!inA || inP){ continue; }
+      }
+    }
+    out.push(a);
+  }
+  
+  const snapped=[];
+  for(const ev of out){
+    const q=Math.max(0, Math.round(ev.t/spb)*spb);
+    if(!snapped.length || snapped.at(-1).label!==ev.label){
+      snapped.push({t:q, label:ev.label, fi:ev.fi});
+    }
+  }
+  
+  return snapped;
+}
+
+// ===== EARLY OPENING ENFORCEMENT =====
+function enforceEarlyDiatonicOpening(tl, key, feats, bpm){
+  if(!tl?.length) return tl;
+  const spb=60/(bpm||120);
+  const earlyWindow = Math.max(3.5, 2*spb);
+  const diatonicPcs = (key.minor? MINOR_SCALE: MAJOR_SCALE).map(s=>toPc(key.root+s));
+
+  function snapToDiatonic(pc){
+    let best=diatonicPcs[0],bestD=99;
+    for(const d of diatonicPcs){
+      const dist=Math.min((pc-d+12)%12,(d-pc+12)%12);
+      if(dist<bestD){ bestD=dist; best=d; }
+    }
+    return best;
+  }
+
+  function preferQualityCtx(rootPc, fi){
+    if(!key.minor){
+      const rel=toPc(rootPc-key.root);
+      if(rel===0||rel===5||rel===7) return '';
+      if(rel===2||rel===4||rel===9) return 'm';
+      return '';
+    }
+    const rel=toPc(rootPc-key.root);
+    const i0=Math.max(0, fi-2), i1=Math.min(feats.chroma.length-1, fi+2);
+    const avg=new Float32Array(12);
+    for(let i=i0;i<=i1;i++){ 
+      const c=feats.chroma[i]; 
+      for(let p=0;p<12;p++) avg[p]+=c[p]||0; 
+    }
+    for(let p=0;p<12;p++) avg[p]/=(i1-i0+1);
+    const s=(d)=>avg[toPc(rootPc+d)]||0;
+    const M3=s(4), m3=s(3);
+
+    if((rel===MINOR_SCALE[2] || rel===MINOR_SCALE[4] || rel===MINOR_SCALE[6]) && (M3 > m3*1.25 && M3>0.08)){
+      return '';
+    }
+    if(rel===MINOR_SCALE[0] || rel===MINOR_SCALE[3] || rel===MINOR_SCALE[4]) return 'm';
+    return (M3>m3)? '' : 'm';
+  }
+
+  const out=[];
+  for(const ev of tl){
+    let label = ev.label;
+    if(ev.t <= earlyWindow){
+      const r=parseRoot(label);
+      const isIn = r>=0 && inKey(r, key.root, key.minor);
+      if(!isIn){
+        const bp = feats.bassPc[ev.fi] ?? -1;
+        let newRoot = bp>=0 ? snapToDiatonic(bp) : snapToDiatonic(r>=0? r : key.root);
+        const veryEarly = ev.t < Math.min(2.0, spb*1.5);
+        if(veryEarly) newRoot = key.root;
+        const q = preferQualityCtx(newRoot, ev.fi);
+        label = nameSharp(newRoot) + q;
+      }else{
+        const q = preferQualityCtx(r, ev.fi);
+        const base=nameSharp(r);
+        label = base + q;
+      }
+    }
+    out.push({...ev, label});
+  }
+  return out;
+}
+
+// ===== PROFESSIONAL DECORATIONS (7/9/11/13 + sus + dim + alt) =====
+function decorateQualitiesPro(tl, feats, key, mode){
+  if(mode==='basic') return tl.map(e=>({...e}));
+  
+  const mul = Number(decSensEl.value)||1.0;
+  const out=[];
+  
+  for(const ev of tl){
+    const root=parseRoot(ev.label); 
+    if(root<0){ out.push(ev); continue; }
+    
+    const baseTriadMinor = /m(?!aj)/.test(ev.label);
+    let base = ev.label.replace(/(m|sus2|sus4|dim|aug|7|maj7|add9|9|11|13|6|m7b5|alt|b9|#9|b5|#5)$/,'');
+    if(baseTriadMinor) base += 'm';
+
+    const i0=Math.max(0, ev.fi-2), i1=Math.min(feats.chroma.length-1, ev.fi+2);
+    const avg=new Float32Array(12);
+    for(let i=i0;i<=i1;i++){ 
+      const c=feats.chroma[i]; 
+      for(let p=0;p<12;p++) avg[p]+=c[p]||0; 
+    }
+    for(let p=0;p<12;p++) avg[p]/=(i1-i0+1);
+
+    const s = d => avg[toPc(root+d)]||0;
+    const sR = s(0);
+    const sM3 = s(4), s_m3 = s(3);
+    const s5 = s(7), s_b5 = s(6), s_sharp5 = s(8);
+    const s2 = s(2), s4 = s(5);
+    const s_b7 = s(10), s7 = s(11);
+    const s6 = s(9);
+    const s_b9 = s(1), s_sharp9 = s(3);
+    const s11 = s(5), s_sharp11 = s(6);
+    const s13 = s(9), s_b13 = s(8);
+
+    let label = base;
+
+    // === SUS ===
+    const thirdStrong = baseTriadMinor ? (s_m3 > 0.13*mul) : (sM3 > 0.13*mul);
+    const thirdWeak = !thirdStrong;
+    const sus2Strong = s2 > 0.22/mul && s2 > s4*0.9;
+    const sus4Strong = s4 > 0.22/mul && s4 > s2*0.9;
+    
+    if(!baseTriadMinor && thirdWeak){
+      if(sus4Strong) label = base.replace(/m$/,'') + 'sus4';
+      else if(sus2Strong) label = base.replace(/m$/,'') + 'sus2';
+    }
+
+    // === 6th chords ===
+    const sixth6Strong = s6 > 0.18/mul && s6 > s_b7*1.2;
+    if(sixth6Strong && !/sus/.test(label) && (baseTriadMinor ? s_m3 : sM3) > 0.12/mul){
+      label = base + '6';
+    }
+
+    // === 7 / maj7 ===
+    const domContext = (degreeOfChord(label,key)===4);
+    const majContext = !/m$/.test(label) && !/sus/.test(label);
+    const b7Confident = s_b7 > 0.20/mul && s_b7 > (baseTriadMinor ? s_m3 : sM3)*0.7 && sR > 0.10/mul;
+    const maj7Confident = majContext && s7 > 0.20/mul && s7 > s_b7*1.2 && (baseTriadMinor ? s_m3 : sM3) > 0.12/mul;
+    
+    if(!/6$/.test(label)){
+      if(maj7Confident){
+        label = base.replace(/m$/,'') + 'maj7';
+      }else if(!/sus/.test(label) && (domContext ? (s_b7 > 0.17/mul) : b7Confident)){
+        if(!/7$/.test(label) && !/maj7$/.test(label)) label += '7';
+      }
+    }
+
+    // === dim / m7b5 ===
+    const dimTriad = (baseTriadMinor && s_b5 > 0.26/mul && s5 < 0.12*mul && s_m3 > 0.14/mul)
+                  || (!baseTriadMinor && s_b5 > 0.30/mul && s5 < 0.10*mul && sM3 < 0.08*mul);
+    if(dimTriad){
+      if(baseTriadMinor && s_b7 > 0.18/mul){
+        label = base.replace(/m$/,'m7b5');
+      }else{
+        label = base.replace(/m$/,'') + 'dim';
+      }
+    }
+
+    // === Augmented ===
+    const augTriad = !baseTriadMinor && s_sharp5 > 0.24/mul && s5 < 0.10*mul && sM3 > 0.12/mul;
+    if(augTriad){
+      label = base.replace(/m$/,'') + 'aug';
+    }
+
+    // === Extended (9/11/13) only in jazz/pro mode ===
+    if(mode==='jazz' || mode==='pro'){
+      const has7 = /7$/.test(label) || /maj7$/.test(label);
+      
+      // 9
+      const nineStrong = s2 > 0.25/mul && sR > 0.10/mul;
+      if(has7 && nineStrong){
+        label = label.replace(/7$/,'9');
+      } else if(!/sus/.test(label) && nineStrong && (baseTriadMinor ? s_m3 : sM3) > 0.10/mul){
+        if(!/maj7|7|9|add9/.test(label)){
+          label += 'add9';
+        }
+      }
+
+      // Altered (b9, #9)
+      if(mode==='pro' && domContext && has7){
+        const b9Strong = s_b9 > 0.18/mul;
+        const sharp9Strong = s_sharp9 > 0.18/mul && s_m3 < 0.10*mul;
+        if(b9Strong && !sharp9Strong && !/b9/.test(label)) label += 'b9';
+        if(sharp9Strong && !b9Strong && !/#9/.test(label)) label += '#9';
+      }
+
+      // 11
+      if(mode==='pro'){
+        const eleven11Strong = s11 > 0.20/mul && !sus4Strong;
+        if(/9/.test(label) && eleven11Strong && !/11/.test(label)){
+          label = label.replace(/9/,'11');
+        }
+      }
+
+      // 13
+      if(mode==='jazz' || mode==='pro'){
+        const thirteen13Strong = s13 > 0.22/mul && s6 < 0.15*mul;
+        if(/9/.test(label) && thirteen13Strong && !/13/.test(label)){
+          label = label.replace(/9/,'13');
+        }
+      }
+
+      // Altered chord (7alt)
+      if(mode==='pro' && domContext){
+        const hasAlt = (s_b5>0.20/mul || s_sharp5>0.20/mul) && (s_b9>0.15/mul || s_sharp9>0.15/mul);
+        if(hasAlt && /7/.test(label) && !/alt/.test(label)){
+          label = label.replace(/7.*$/,'7alt');
+        }
+      }
+    }
+
+    out.push({...ev, label});
+  }
+  return out;
+}
+
+// ===== MINOR-MAJOR ADJUSTMENT =====
+function adjustMinorMajors(tl, feats, key){
+  if(!key.minor) return tl;
+  const out=[];
+  
+  for(const ev of tl){
+    let label=ev.label;
+    const r=parseRoot(label); 
+    if(r<0){ out.push(ev); continue; }
+    
+    const hasDecor = /(sus|dim|aug|maj7|7|9|add9|m7b5|11|13|6|alt)/.test(label);
+    const isMinor = /(^[A-G](?:#|b)?)(m)(?!aj)/.test(label);
+    if(hasDecor || !isMinor){ out.push(ev); continue; }
+
+    const rel=toPc(r - key.root);
+    const degreeIsIII = (rel===MINOR_SCALE[2]);
+    const degreeIsV   = (rel===MINOR_SCALE[4]);
+    const degreeIsVII = (rel===MINOR_SCALE[6]);
+    if(!(degreeIsIII||degreeIsV||degreeIsVII)){ out.push(ev); continue; }
+
+    const i0=Math.max(0, ev.fi-2), i1=Math.min(feats.chroma.length-1, ev.fi+2);
+    const avg=new Float32Array(12);
+    for(let i=i0;i<=i1;i++){ 
+      const c=feats.chroma[i]; 
+      for(let p=0;p<12;p++) avg[p]+=c[p]||0; 
+    }
+    for(let p=0;p<12;p++) avg[p]/=(i1-i0+1);
+    const s=(d)=>avg[toPc(r+d)]||0;
+    const M3=s(4), m3=s(3);
+
+    if(M3 > m3*1.25 && M3>0.08){
+      label = label.replace(/m(?!aj)/,'');
+    }
+    out.push({...ev, label});
+  }
+  return out;
+}
+
+// ===== PROFESSIONAL INVERSIONS =====
+function addInversionsPro(tl, feats, bassMul){
+  const out=[];
+  
+  for(const ev of tl){
+    const r = parseRoot(ev.label);
+    if(r<0){ out.push(ev); continue; }
+
+    // Parse chord tones from label
+    const isMinor = /m(?!aj)/.test(ev.label);
+    const isSus2 = /sus2/.test(ev.label);
+    const isSus4 = /sus4/.test(ev.label);
+    const has7 = /7/.test(ev.label);
+    const hasMaj7 = /maj7/.test(ev.label);
+    const has9 = /9/.test(ev.label) || /add9/.test(ev.label);
+    const has11 = /11/.test(ev.label);
+    const has13 = /13/.test(ev.label);
+    const has6 = /6/.test(ev.label);
+    
+    let triad = isSus2 ? [0,2,7] : (isSus4 ? [0,5,7] : (isMinor ? [0,3,7] : [0,4,7]));
+    if(has7 && !hasMaj7) triad.push(10);
+    if(hasMaj7) triad.push(11);
+    if(has9) triad.push(2);
+    if(has11) triad.push(5);
+    if(has13) triad.push(9);
+    if(has6) triad.push(9);
+
+    const bassPc = feats.bassPc[ev.fi] ?? -1;
+    if(bassPc<0 || bassPc===r){ out.push(ev); continue; }
+
+    const rel = toPc(bassPc - r);
+    const inChord = triad.includes(rel);
+    
+    if(inChord){
+      const c = feats.chroma[ev.fi]||new Float32Array(12);
+      const confidence = (c[bassPc]||0);
+      
+      // Check temporal stability
+      let stableCount=0;
+      const checkRange=2;
+      for(let j=Math.max(0,ev.fi-checkRange); j<=Math.min(feats.bassPc.length-1,ev.fi+checkRange); j++){
+        if(feats.bassPc[j]===bassPc) stableCount++;
+      }
+      
+      const isStable = stableCount >= 3;
+      
+      if((confidence > 0.10/Math.max(1,bassMul*0.9)) && isStable){
+        const rootName = ev.label.match(/^([A-G](?:#|b)?)/)?.[1]||'';
+        const suffix   = ev.label.slice(rootName.length);
+        const invLbl   = rootName + suffix + '/' + nameSharp(bassPc);
+        out.push({...ev, label: invLbl});
+        continue;
+      }
+    }
+    out.push(ev);
+  }
+  return out;
+}
+
+// ===== VALIDATION AND REFINEMENT =====
+function validateAndRefine(tl, key, feats){
+  const valMul = Number(valSensEl.value)||1.0;
+  const out=[];
+  
+  for(let i=0; i<tl.length; i++){
+    const ev = tl[i];
+    const prev = i>0 ? tl[i-1] : null;
+    const next = i<tl.length-1 ? tl[i+1] : null;
+    
+    const r = parseRoot(ev.label);
+    if(r<0){ out.push(ev); continue; }
+    
+    // Diatonic score
+    const isDiatonic = inKey(r, key.root, key.minor);
+    let diatonicScore = isDiatonic ? 1.0 : 0.3;
+    
+    // Voice leading score
+    let voiceLeadingScore = 0.5;
+    if(prev){
+      const rPrev = parseRoot(prev.label);
+      if(rPrev>=0){
+        const dist = Math.min((r-rPrev+12)%12, (rPrev-r+12)%12);
+        if(dist<=2) voiceLeadingScore = 1.0;
+        else if(dist<=5) voiceLeadingScore = 0.7;
+        else voiceLeadingScore = 0.4;
+      }
+    }
+    
+    // Chromatic approach
+    let chromaticContext = false;
+    if(prev && next){
+      const rPrev = parseRoot(prev.label);
+      const rNext = parseRoot(next.label);
+      if(rPrev>=0 && rNext>=0){
+        const d1 = Math.abs(r-rPrev);
+        const d2 = Math.abs(rNext-r);
+        if((d1===1 || d1===11) && (d2===1 || d2===11)){
+          chromaticContext = true;
+        }
+      }
+    }
+    
+    // Check for power chord (only R+5)
+    const c = feats.chroma[ev.fi] || new Float32Array(12);
+    const sR = c[toPc(r)] || 0;
+    const s5 = c[toPc(r+7)] || 0;
+    const sM3 = c[toPc(r+4)] || 0;
+    const sm3 = c[toPc(r+3)] || 0;
+    const isPowerChord = (sR>0.15 && s5>0.15 && sM3<0.08 && sm3<0.08);
+    
+    if(isPowerChord && /m/.test(ev.label)){
+      const base = ev.label.match(/^([A-G](?:#|b)?)/)?.[1]||'';
+      out.push({...ev, label: base});
+      continue;
+    }
+    
+    // Validation threshold
+    const threshold = 0.3 / valMul;
+    if(diatonicScore < threshold && voiceLeadingScore < 0.4 && !chromaticContext){
+      // Try to find better alternative
+      let bestAlt = ev.label;
+      let bestScore = diatonicScore + voiceLeadingScore;
+      
+      const alternatives = [
+        nameSharp(toPc(r+1)),
+        nameSharp(toPc(r-1)),
+        nameSharp(toPc(r+2))+'m',
+        nameSharp(toPc(r-2))+'m'
+      ];
+      
+      for(const alt of alternatives){
+        const rAlt = parseRoot(alt);
+        if(rAlt>=0 && inKey(rAlt, key.root, key.minor)){
+          const altScore = 1.0 + (voiceLeadingScore*0.5);
+          if(altScore > bestScore){
+            bestAlt = alt;
+            bestScore = altScore;
+          }
+        }
+      }
+      
+      out.push({...ev, label: bestAlt});
+    }else{
+      out.push(ev);
+    }
+  }
+  return out;
+}
+
+// ===== ORNAMENT CLASSIFICATION =====
+function classifyOrnaments(tl, bpm, feats){
+  const spb = 60/(bpm||120);
+  const out=[];
+  
+  for(let i=0; i<tl.length; i++){
+    const ev = tl[i];
+    const prev = i>0 ? tl[i-1] : null;
+    const next = i<tl.length-1 ? tl[i+1] : null;
+    const dur = next ? (next.t - ev.t) : spb;
+    
+    let ornamentType = 'structural';
+    
+    // Passing chord: short duration, stepwise motion
+    if(dur < 0.35*spb && prev && next){
+      const rPrev = parseRoot(prev.label);
+      const r = parseRoot(ev.label);
+      const rNext = parseRoot(next.label);
+      
+      if(rPrev>=0 && r>=0 && rNext>=0){
+        const d1 = Math.abs(r-rPrev);
+        const d2 = Math.abs(rNext-r);
+        if((d1<=2 || d1>=10) && (d2<=2 || d2>=10)){
+          ornamentType = 'passing';
+        }
+      }
+    }
+    
+    // Neighbor chord: returns to previous
+    if(dur < 0.4*spb && prev && next && prev.label === next.label){
+      ornamentType = 'neighbor';
+    }
+    
+    // Pedal point: bass stays same
+    if(prev){
+      const bassCur = feats.bassPc[ev.fi] ?? -1;
+      const bassPrev = feats.bassPc[prev.fi] ?? -1;
+      if(bassCur>=0 && bassPrev>=0 && bassCur===bassPrev){
+        const rCur = parseRoot(ev.label);
+        const rPrev = parseRoot(prev.label);
+        if(rCur>=0 && rPrev>=0 && rCur!==rPrev){
+          ornamentType = 'pedal';
+        }
+      }
+    }
+    
+    out.push({...ev, ornamentType});
+  }
+  return out;
+}
+
+// ===== MODAL ANALYSIS =====
+function analyzeModalContext(tl, key, feats){
+  const out=[];
+  
+  for(const ev of tl){
+    const r = parseRoot(ev.label);
+    if(r<0){ out.push({...ev, modalContext:null}); continue; }
+    
+    const rel = toPc(r - key.root);
+    let modalContext = null;
+    
+    // Secondary dominant
+    if(/7$/.test(ev.label) && !/maj7/.test(ev.label)){
+      const targetRoot = toPc(r+7);
+      if(inKey(targetRoot, key.root, key.minor)){
+        modalContext = 'secondary_dominant';
+      }
+    }
+    
+    // Borrowed from parallel
+    if(!key.minor){
+      // In major: check for bVI, bVII, iv
+      if(rel===8) modalContext = 'borrowed_bVI'; // bVI
+      if(rel===10) modalContext = 'borrowed_bVII'; // bVII
+      if(rel===5 && /m/.test(ev.label)) modalContext = 'borrowed_iv';
+    }else{
+      // In minor: check for IV (major)
+      if(rel===5 && !/m/.test(ev.label)) modalContext = 'borrowed_IV_major';
+    }
+    
+    // Neapolitan
+    if(rel===1 && /m/.test(ev.label)){
+      modalContext = 'neapolitan';
+    }
+    
+    out.push({...ev, modalContext});
+  }
+  return out;
+}
+
+// ===== QUANTIZE TO GRID =====
+function quantizeToGrid(timeline, bpm, timeSignature){
+  const beatDuration = 60 / bpm;
+  let grid;
+  
+  if(timeSignature === 3){
+    grid = [0, 1/3, 2/3, 1];
+  } else if(timeSignature === 6){
+    grid = [0, 1/6, 2/6, 3/6, 4/6, 5/6, 1];
+  } else {
+    grid = [0, 0.25, 0.5, 0.75, 1];
+  }
+  
+  return timeline.map(event => {
+    const beatPosition = (event.t / beatDuration) % 1;
+    const snapped = grid.reduce((closest, gridPoint) => 
+      Math.abs(beatPosition - gridPoint) < Math.abs(beatPosition - closest) 
+        ? gridPoint : closest
+    );
+    return {
+      ...event,
+      t: Math.floor(event.t / beatDuration) * beatDuration + snapped * beatDuration
+    };
+  });
+}
+
+// ===== HARMONIC FUNCTION ANALYSIS =====
+function degreeOfChord(label, key){
+  const rootPc = parseRoot(label);
+  if(rootPc<0) return null;
+  const rel = toPc(rootPc - key.root);
+  const scale = key.minor? MINOR_SCALE : MAJOR_SCALE;
+  let bestDeg = null, bestDist=999;
+  for(let d=0; d<scale.length; d++){
+    const scPc = scale[d];
+    const dist = Math.min((rel-scPc+12)%12,(scPc-rel+12)%12);
+    if(dist<bestDist){ bestDist=dist; bestDeg=d; }
+  }
+  return bestDeg;
+}
+
+function getHarmonicFunction(label, key){
+  const deg = degreeOfChord(label, key);
+  if(deg===null) return '—';
+  
+  const funcNames = key.minor 
+    ? ['i', 'ii°', 'III', 'iv', 'v', 'VI', 'VII']
+    : ['I', 'ii', 'iii', 'IV', 'V', 'vi', 'vii°'];
+  
+  let func = funcNames[deg] || '—';
+  
+  // Adjust for quality
+  if(/7$/.test(label) && !/maj7/.test(label)){
+    func += '7';
+  }
+  if(/maj7/.test(label)){
+    func += 'maj7';
+  }
+  if(/9/.test(label)){
+    func += '9';
+  }
+  
+  return func;
+}
+
+function isCadence(prevLabel, curLabel, key){
+  const dPrev = degreeOfChord(prevLabel,key);
+  const dCur = degreeOfChord(curLabel,key);
+  return (dPrev===4 && dCur===0);
+}
+
+function isSubdominantToDominant(prevLabel, curLabel, key){
+  const dPrev=degreeOfChord(prevLabel,key);
+  const dCur=degreeOfChord(curLabel,key);
+  return (dPrev===3 && dCur===4);
+}
+
+// ===== LIVE PLAYBACK =====
+function hookPlaybackLive(){
+  const st=window.__STATE; 
+  if(!st) return;
+  
+  const capo=parseInt(capoEl.value||'0',10);
+  const spb=60/(st.bpm||120);
+  const minPauseSec=Math.max(1.0, 1.75*spb);
+  const maxPerLine=7;
+
+  let lines=[]; 
+  let currentLine=[]; 
+  let lastChord=null; 
+  let lastChangeSec=0;
+  
+  liveSheetEl.textContent='—';
+  gateChip.style.display='inline-flex';
+
+  player.ontimeupdate=()=>{
+    const t=player.currentTime;
+    if(t < st.gateTime){ 
+      liveChordEl.textContent='—'; 
+      liveFunctionEl.textContent='—';
+      return; 
+    }
+    if(gateChip.style.display!=='none') gateChip.style.display='none';
+
+    let i=st.timeline.findIndex(x=>x.t>t);
+    if(i===-1) i=st.timeline.length;
+    const ev=st.timeline[i-1]||st.timeline[0];
+    if(!ev) return;
+    
+    const shown = sanitizeLabel(applyCapoToLabel(ev.label, capo));
+    liveChordEl.textContent = shown;
+    
+    // Show function
+    const func = getHarmonicFunction(ev.label, st.key);
+    const modalInfo = ev.modalContext ? ` (${ev.modalContext})` : '';
+    liveFunctionEl.textContent = func + modalInfo;
+    
+    // Show ornament type
+    if(ev.ornamentType === 'structural'){
+      structuralChip.style.display='inline-flex';
+      ornamentChip.style.display='none';
+    }else{
+      ornamentChip.style.display='inline-flex';
+      ornamentChip.textContent = ev.ornamentType;
+      structuralChip.style.display='none';
+    }
+
+    if(shown!==lastChord){
+      const pause = (t-lastChangeSec) > minPauseSec;
+      const eNow = energyAt(t, st.energy);
+      const ePrev = energyAt(Math.max(0,t-0.4), st.energy);
+      const energyDrop = (ePrev>0.25 && (eNow < ePrev*0.55));
+
+      const cadenceBreak = lastChord ? isCadence(lastChord, shown, st.key) : false;
+      const sdToDom = lastChord ? isSubdominantToDominant(lastChord, shown, st.key) : false;
+
+      const needBreak = 
+          (currentLine.length>=maxPerLine)
+          || cadenceBreak
+          || (pause && energyDrop)
+          || (sdToDom && currentLine.length>=4);
+
+      if(needBreak && currentLine.length){
+        lines.push(currentLine.join('   '));
+        currentLine=[];
+      }
+
+      // Add ornament marker
+      let displayChord = shown;
+      if(ev.ornamentType !== 'structural'){
+        displayChord = '(' + shown + ')';
+      }
+      
+      currentLine.push(displayChord);
+
+      const text=[...lines, currentLine.join('   ')].filter(s=>s && s.length).join('\n');
+      liveSheetEl.innerText = text || '—';
+
+      lastChord=shown;
+      lastChangeSec=t;
+    }
+  };
+
+  resetSheetBtn.onclick=()=>{
+    lines=[]; 
+    currentLine=[]; 
+    lastChord=null; 
+    lastChangeSec=player.currentTime;
+    liveSheetEl.textContent='—';
+  };
+}
+
+// ===== EXPORT TO CHORDPRO =====
+exportBtn.onclick=()=>{
+  const st=window.__STATE;
+  if(!st){ alert('אין נתונים לייצוא'); return; }
+  
+  const capo=parseInt(capoEl.value||'0',10);
+  let output = '{title: Untitled Song}\n';
+  output += '{artist: Unknown}\n';
+  output += `{key: ${keyBadge.textContent}}\n`;
+  output += `{tempo: ${st.bpm}}\n`;
+  if(capo>0) output += `{capo: ${capo}}\n`;
+  output += '\n';
+  
+  for(const ev of st.timeline){
+    const chord = sanitizeLabel(applyCapoToLabel(ev.label, capo));
+    const time = ev.t.toFixed(2);
+    output += `[${chord}] `;
+  }
+  
+  const blob = new Blob([output], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'chords.cho';
+  a.click();
+  URL.revokeObjectURL(url);
+};
+
+// ===== GATE DETECTION =====
+function detectStartGate(feats){
+  const {frameE,bassPc,chroma}=feats;
+  const N=frameE.length;
+  const energies=[...frameE].filter(x=>Number.isFinite(x)).sort((a,b)=>a-b);
+  const med = energies[Math.floor(energies.length*0.5)] || 0;
+  const thr = med*1.4;
+  const needStable=2;
+  let run=0;
+  
+  for(let i=0;i<N;i++){
+    const strong = frameE[i]>thr;
+    const hasBass = bassPc[i]>=0;
+    let chromaPeak=false;
+    if(chroma[i]){
+      let mx=0; 
+      for(let k=0;k<12;k++) mx=Math.max(mx, chroma[i][k]||0);
+      chromaPeak = mx>0.20;
+    }
+    if(hasBass || chromaPeak){ return Math.max(0, i-1); }
+
+    if(strong){ 
+      run++; 
+      if(run>=needStable) return i-needStable+1; 
+    }
+    else run=0;
+  }
+  return 0;
+}
+
+// ===== UTILITIES =====
+function energyAt(t, energy){
+  const {t:times, v:vals}=energy;
+  if(!times?.length) return 0;
+  let lo=0, hi=times.length-1;
+  while(lo<hi){
+    const mid=(lo+hi)>>1;
+    if(times[mid]<t) lo=mid+1; 
+    else hi=mid;
+  }
+  const i=Math.max(0,Math.min(times.length-1,lo));
+  return vals[i];
+}
+
+function normalize01(arr){
+  if(!arr?.length) return [];
+  let mn=Infinity,mx=-Infinity;
+  for(const v of arr){ 
+    if(Number.isFinite(v)){ 
+      if(v<mn) mn=v; 
+      if(v>mx) mx=v; 
+    } 
+  }
+  const d=(mx-mn)||1;
+  return arr.map(v=> (v-mn)/d );
+}
+
+function mixStereo(buf){ 
+  const a=buf.getChannelData(0), b=(buf.numberOfChannels>1?buf.getChannelData(1):a); 
+  const m=new Float32Array(buf.length); 
+  for(let i=0;i<buf.length;i++) m[i]=(a[i]+b[i])*0.5; 
+  return m; 
+}
+
+function resampleLinear(x,sr,target){ 
+  const r=target/sr, L=Math.floor(x.length*r), y=new Float32Array(L); 
+  for(let i=0;i<L;i++){ 
+    const t=i/r, i0=Math.floor(t), i1=Math.min(x.length-1,i0+1), a=t-i0; 
+    y[i]=x[i0]*(1-a)+x[i1]*a; 
+  } 
+  return y; 
+}
+
+function percentileLocal(arr, p){ 
+  const a=[...arr].filter(x=>Number.isFinite(x)).sort((x,y)=>x-y); 
+  if(!a.length) return 0; 
+  const i=Math.floor((p/100)*(a.length-1)); 
+  return a[i]; 
+}
+</script>
+</body>
+</html>
+</p>
 </body>
 </html>

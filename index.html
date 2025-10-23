@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chord Finder Pro ⭐ EXCELLENT</title>
+  <meta name="description" content="ניתוח אקורדים מקצועי עם AI - זיהוי הרמוניות מורכבות, היפוכים חכמים וקישוטים">
+  <meta name="theme-color" content="#0b1022" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Chord Finder Pro">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <style>
+    :root{--bg:#0b1022;--panel:#0f172a;--muted:#94a3b8;--text:#e5e7eb;--card:#0a1324;--border:#1b2333;--brand:#22c55e;--accent:#38bdf8;--alert:#f59e0b;--ornament:#a78bfa}
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(160deg,var(--bg),#0a0f1c);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);direction:rtl;min-height:100vh}
+    .wrap{max-width:1200px;margin:auto;padding:18px}
+    h1{margin:6px 0 10px;font-size:24px}
+    h2{font-size:18px;margin:8px 0}
+    .muted{color:var(--muted);font-size:14px}
+    .panel{background:#0c162b;border:1px solid #1f2a40;border-radius:16px;padding:14px;margin-top:12px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    input[type="file"], select, button, input[type="number"]{padding:10px 14px;border-radius:12px;border:1px solid #223;background:#0b1221;color:#cfe3ff;appearance:none;font-weight:700;cursor:pointer}
+    button:hover{background:#1a2a45}
+    .badge{display:inline-flex;gap:6px;align-items:center;background:#0b1221;border:1px solid #1f2937;color:#cbd5e1;border-radius:999px;padding:6px 10px;font-size:12px}
+    .badge.ai{border-color:#23664d;background:#0d2e1f;color:#d7ffe6}
+    .badge.pro{border-color:#7c3aed;background:#2e1065;color:#e9d5ff}
+    .live{background:#0c162b;border:1px solid #1f2a40;border-radius:16px;padding:18px;display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+    .live .title{color:#a9b4c8;font-size:13px}
+    .live .ch{font-weight:800;font-size:42px}
+    .live .func{font-size:14px;color:var(--ornament);margin-top:4px}
+    .mono{font-family:ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;line-height:1.8;direction:ltr;text-align:left;font-size:15px}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid #2a3d55;margin:2px 4px;background:#0b1221}
+    .ok{border-color:#1f5f3f;color:#d7ffe6;background:#0d2e1f}
+    .err{border-color:#5f2323;color:#ffe0e0;background:#3f1d1d}
+    .warn{border-color:#8a6a1f;color:#fff0d9;background:#3a2a0c}
+    .spin{width:12px;height:12px;border-radius:50%;border:2px solid var(--accent);border-top-color:transparent;animation:sp 1s linear infinite}
+    @keyframes sp{to{transform:rotate(360deg)}}
+    progress{width:240px;height:10px;border-radius:8px;overflow:hidden}
+    .mutedSmall{color:#94a3b8;font-size:12px}
+    .chip{display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:999px;background:#0b1221;border:1px solid #1f2a40;font-size:12px}
+    .chip .dot{width:6px;height:6px;border-radius:50%;background:#22c55e}
+    .chip.warn .dot{background:#f59e0b}
+    .sliderRow{display:flex;align-items:center;gap:10px;margin-top:8px}
+    input[type="range"]{width:220px}
+    .tag{font-size:12px;color:#cbd5e1;border:1px solid #1f2a40;padding:4px 8px;border-radius:999px;background:#0b1221}
+    input[type="checkbox"]{width:18px;height:18px;cursor:pointer}
+    .featureBox{background:#0a1324;border:1px solid #1f2a40;padding:10px;border-radius:8px;margin-top:8px}
+    .featureBox label{display:flex;align-items:center;gap:8px;margin:4px 0;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>🎵 Chord Finder Pro v10.0 ⭐ EXCELLENT <span class="badge pro">Professional</span></h1>
+    <div class="muted">ניתוח הרמוני מקצועי: אקורדים מורכבים (11/13/alt) • היפוכים חכמים • סיווג קישוטים • ולידציה הרמונית</div>
+
+    <section class="panel">
+      <h2>⚙️ הגדרות</h2>
+      <div class="row">
+        <input id="file" type="file" accept="audio/*,video/*" />
+        <label>מצב:
+          <select id="extMode">
+            <option value="triad">טריאדות</option>
+            <option value="smart">חכם</option>
+            <option value="pro" selected>מקצועי</option>
+          </select>
+        </label>
+        <label>🎸 קאפו:
+          <input id="capo" type="number" value="0" min="0" max="9" style="width:80px" />
+        </label>
+        <button id="analyzeBtn">🔬 נתח</button>
+        <button id="playBtn" disabled>🎧 השמע</button>
+      </div>
+
+      <div class="featureBox">
+        <div style="font-weight:700;margin-bottom:6px">תכונות מקצועיות:</div>
+        <label><input type="checkbox" id="detectModal" checked /> Modal Interchange</label>
+        <label><input type="checkbox" id="detectOrnaments" checked /> קישוטים</label>
+        <label><input type="checkbox" id="validateHarmony" checked /> ולידציה</label>
+        <label><input type="checkbox" id="advancedInversions" checked /> היפוכים מתקדמים</label>
+        <label><input type="checkbox" id="detectSecondary" checked /> דומיננטים משניים</label>
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <span class="badge">BPM: <b id="bpm">—</b></span>
+        <span class="badge">משך: <b id="dur">—</b></span>
+        <span class="badge">סולם: <b id="keyBadge">—</b></span>
+        <span id="aiBadge" class="badge ai" style="display:none">AI Enhanced</span>
+      </div>
+
+      <div id="status" class="pill ok" style="display:none"></div>
+      <div id="error" class="pill err" style="display:none"></div>
+
+      <div class="sliderRow">
+        <span class="tag">×<span id="bassMulTxt">1.20</span></span>
+        <input id="bassSens" type="range" min="0.8" max="2.0" step="0.05" value="1.20" />
+        <span class="mutedSmall">רגישות בס</span>
+      </div>
+
+      <div class="row">
+        <progress id="prog" max="100" value="0" style="display:none"></progress>
+        <span id="progTxt" class="mutedSmall"></span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>🎹 תצוגה חיה</h2>
+      <audio id="player" controls preload="auto" style="width:100%"></audio>
+      <div class="live">
+        <div>
+          <div class="title">האקורד כרגע</div>
+          <div class="ch" id="liveChord">—</div>
+          <div class="func" id="liveFunc">—</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>📝 דף נגינה</h2>
+      <div id="liveSheet" class="mono">—</div>
+      <div class="row" style="margin-top:8px">
+        <button id="resetSheet">אפס</button>
+        <button id="exportBtn">📥 ייצא</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>📊 ניתוח הרמוני</h2>
+      <div id="analysisDetail" class="mono" style="font-size:13px;color:#94a3b8">
+        יוצג לאחר ניתוח...
+      </div>
+    </section>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>

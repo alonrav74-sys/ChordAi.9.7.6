@@ -1,4 +1,3 @@
-
 // ===== PWA MANIFEST SETUP FOR FULLSCREEN =====
 const manifest = {
   "name": "Chord Finder AI Pro - Professional Edition",
@@ -1420,6 +1419,3 @@ function percentileLocal(arr, p){
   const i=Math.floor((p/100)*(a.length-1)); 
   return a[i]; 
 }
-
-</body>
-</html>
